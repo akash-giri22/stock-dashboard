@@ -1,0 +1,172 @@
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #202020;
+  color: #eaeaea;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  border-right: 1px solid #2f2f2f;
+  padding: 16px;
+  height: 100vh;             /* fixed height */
+  overflow-y: auto;          /* scrollable */
+  position: sticky;
+  top: 0;
+  background: #1c1c1c;
+}
+
+.sidebar h2 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+}
+
+.company-card {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid #2b2b2b;
+  border-radius: 10px;
+  background: #171717;
+  margin-bottom: 10px;
+}
+
+.company-card .symbol {
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.company-card button {
+  background: #0ea5e9;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.company-card button:hover {
+  filter: brightness(1.05);
+}
+
+.main {
+  padding: 22px 24px 40px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  color: #eaeaea;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #22c55e;
+  border-color: #22c55e;
+  color: #101010;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 16px;
+}
+
+@media (min-width: 1100px) {
+  .grid {
+    grid-template-columns: 1.3fr 1fr;
+  }
+}
+
+.card {
+  border: 1px solid #2b2b2b;
+  border-radius: 12px;
+  background: #151515;
+  padding: 16px;
+}
+
+.card h3 {
+  margin: 0 0 12px 0;
+}
+
+.table-wrap {
+  max-height: 60vh;
+  overflow: auto;
+  border-radius: 10px;
+  border: 1px solid #2b2b2b;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background: #111;
+  border-bottom: 1px solid #2b2b2b;
+}
+
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #242424;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.stat {
+  border: 1px solid #2b2b2b;
+  border-radius: 12px;
+  padding: 14px;
+  background: #171717;
+}
+
+.stat .label {
+  color: #bdbdbd;
+  font-size: 12px;
+}
+
+.stat .value {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 6px;
+}
